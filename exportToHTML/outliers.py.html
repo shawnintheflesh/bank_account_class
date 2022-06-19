@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>outliers.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #6897bb;}
+.s2 { color: #cc7832;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+outliers.py</font>
+</center></td></tr></table>
+<pre><span class="s0">data = [</span><span class="s1">2</span><span class="s2">, </span><span class="s1">3</span><span class="s2">, </span><span class="s1">125</span><span class="s2">, </span><span class="s1">200</span><span class="s2">, </span><span class="s1">365</span><span class="s2">, </span><span class="s1">458</span><span class="s2">, </span><span class="s1">525</span>
+        <span class="s2">, </span><span class="s1">689</span><span class="s2">, </span><span class="s1">783</span><span class="s0">]</span>
+
+<span class="s0">min_valid = </span><span class="s1">125</span>
+<span class="s0">max_valid = </span><span class="s1">700</span>
+
+<span class="s0">stop = </span><span class="s1">0</span>
+
+<span class="s2">for </span><span class="s0">index</span><span class="s2">, </span><span class="s0">value </span><span class="s2">in </span><span class="s0">enumerate(data):</span>
+        <span class="s2">if </span><span class="s0">value &gt;= min_valid:</span>
+                <span class="s0">stop = index</span>
+                <span class="s2">break</span>
+
+
+
+
+<span class="s0">print(stop)</span>
+<span class="s2">del </span><span class="s0">data[:stop]</span>
+
+<span class="s0">start = </span><span class="s1">0</span>
+<span class="s2">for </span><span class="s0">index </span><span class="s2">in </span><span class="s0">range(len(data) -</span><span class="s1">1</span><span class="s2">, </span><span class="s0">-</span><span class="s1">1</span><span class="s2">, </span><span class="s0">-</span><span class="s1">1</span><span class="s0">):</span>
+        <span class="s2">if </span><span class="s0">data[index] &lt;= max_valid:</span>
+                <span class="s0">start = index + </span><span class="s1">1</span>
+                <span class="s2">break</span>
+<span class="s0">print(start)</span>
+<span class="s2">del </span><span class="s0">data[start:]</span>
+<span class="s0">print(data)</span>
+
+</pre>
+</body>
+</html>

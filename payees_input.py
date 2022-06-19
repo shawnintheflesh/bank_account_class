@@ -1,0 +1,23 @@
+payee1 = input("Name: ")
+acc_1 = eval(input("Account Number: "))
+acc_type_1 = input("Account Type: ")
+state1 = input("State: ")
+country1 = input("Country: ")
+
+payee2 = input("Name: ")
+acc_2 = eval(input("Account Number: "))
+acc_type_2 = input("Account Type: ")
+state2 = input("State: ")
+country2 = input("Country: ")
+
+print(payee1)
+print(acc_1)
+print(acc_type_1)
+print(state1)
+print(country1)
+
+print(payee2)
+print(acc_2)
+print(acc_type_2)
+print(state2)
+print(country2)
